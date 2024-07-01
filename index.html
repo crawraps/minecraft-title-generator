@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft title generator</title>
+    <style>
+      #app {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color: #1c1b21;
+        width: 300px;
+        height: 100%;
+        margin-left: auto;
+      }
+      .inputs div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid white;
+        font-size: 0.875rem;
+        color: white;
+      }
+      input::placeholder {
+        color: white;
+      }
+
+      .selector {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      label {
+        color: white;
+        margin-top: .5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="inputs">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="minecraft" class="title" />
+          <select name="title-font-selector" id="title-font-selector">
+            <option value="minecrafter">Minecrafter (flat)</option>
+            <option value="minecrafter-alt">Minecrafter Alt (cracks)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="title">Subtitle:</label>
+          <input type="text" id="subtitle" name="subtitle" placeholder="update" />
+          <select name="subtitle-font-selector" id="subtitle-font-selector">
+            <option value="minecrafter">Minecrafter (flat)</option>
+            <option value="minecrafter-alt">Minecrafter Alt (cracks)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
